@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="js/script.js"></script>
-    <link rel="stylesheet" href="css/css.html">
-    
+    <link rel="stylesheet" href="css/styles.css">
     </head>
 <body>
     
@@ -17,13 +16,13 @@
 <div class="container">
   <form action="/action_page.php">
     <label for="psw">Enter Password</label>
-    <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+    <input onfocus= "display()" onblur="blur()" onkeyup="keyup()" type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
     
     <input type="submit" value="Check password">
   </form>
 </div>
 
-<div id="message" href="css/css.html">
+<div id="message">
   <h3>Password must contain the following:</h3>
   <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
   <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
@@ -31,6 +30,61 @@
   <p id="special" class="invalid">A <b>special characater</b></p>
   <p id="length" class="invalid">Minimum <b>8 characters</b></p>
 </div>
-			
+		
+
+<body>
+    <table>
+        <tr>
+            <th>&nbsp;</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        <tr>
+            <td>Starter a</td>
+            <td>
+                <input name="starter1" type="text" id="starter1" class="starters" value="0" size="3" data-price="100"/></td>
+            <td>€100</td>
+        </tr>
+        <tr>
+            <td>Starter b</td>
+            <td><input name="starter2" type="text" id="starter2" class="starters" value="0" size="3" data-price="50"/></td>
+            <td>€50</td>
+        </tr>
+        <tr>
+            <td>Starter c</td>
+            <td><input name="starter3" type="text" id="starter3" class="starters" value="0" size="3" data-price="50"/></td>
+            <td>€50</td>
+        </tr>
+        <tr>
+            <td>Main a</td>
+            <td><input name="main1" type="text" id="main1" class="mains" value="0" size="3" data-price="30"/></td>
+            <td>€30</td>
+        </tr>
+        <tr>
+            <td>Main b</td>
+            <td><input name="main2" type="text" id="main2" class="mains" value="0" size="3" data-price="24"/></td>
+            <td>€24</td>
+        </tr>
+        <tr>
+            <td>Main c</td>
+            <td><input name="main3" type="text" id="main3" class="mains" value="0" size="3" data-price="24"/></td>
+            <td>€24</td>
+        </tr>
+        <tr>
+            <td class="total">&nbsp;</td>
+            <td class="total right"><strong>Total Starters:</strong></td>
+            <td class="total"><strong>
+                    <div id="ItemsTotal">€0</div>
+                </strong></td>
+        </tr>
+        <tr>
+            <td class="total">&nbsp;</td>
+            <td class="total right"><strong>Total Mains:</strong></td>
+            <td class="total"><strong>
+                    <div id="ItemsTotal">€0</div>
+                </strong></td>
+        </tr>
+    </table>
+
 </body>
+
 <html>
