@@ -6,31 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     </head>
 <body>
     
     <h3>Staff Password Validator</h3>
-
-<div class="container">
-  <form action="/action_page.php">
-    <label for="psw">Enter Password</label>
-    <input onfocus= "display()" onblur="blur()" onkeyup="keyup()" type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
     
-    <input type="submit" value="Check password">
-  </form>
-</div>
-
-<div id="message">
-  <h3>Password must contain the following:</h3>
-  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-  <p id="number" class="invalid">A <b>number</b></p>
-  <p id="special" class="invalid">A <b>special characater</b></p>
-  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
-</div>
-		
+    <div id="pswContainer">
+        <form>
+          
+        
+    
+            <label for="psw">Password</label>
+            <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+            
+            <input type="submit" value="Enter Password">
+          </form>
+    </div>
+      
+    
+    
+    <div id="message">
+      <h3>Password must contain the following:</h3>
+      <p id="letter" class="invalid">A <b>Lowercase</b> letter</p>
+      <p id="capital" class="invalid">A <b>Capital (uppercase)</b> letter</p>
+      <p id="number" class="invalid">A <b>Number</b></p>
+      <p id="special" class="invalid">A <b>special Character</b></p>
+      <p id="length" class="invalid">Minimum <b>8 Characters</b></p>
+    </div>
+            
 
 <body>
     <table>
@@ -38,36 +42,83 @@
             <th>&nbsp;</th>
             <th>Quantity</th>
             <th>Price</th>
+            
         <tr>
-            <td>Starter a</td>
+          <tr> <td>Starters:</td></tr>  
+            <td>Soup</td>
             <td>
-                <input name="starter1" type="text" id="starter1" class="starters" value="0" size="3" data-price="100"/></td>
-            <td>€100</td>
+                <input name="starter1" type="text" id="starter1" class="starters" value="0" size="3" data-price="8"/></td>
+            <td>€8</td>
         </tr>
         <tr>
-            <td>Starter b</td>
-            <td><input name="starter2" type="text" id="starter2" class="starters" value="0" size="3" data-price="50"/></td>
-            <td>€50</td>
+            <td>Chips </td>
+            <td><input name="starter2" type="text" id="starter2" class="starters" value="0" size="3" data-price="5"/></td>
+            <td>€5</td>
         </tr>
         <tr>
-            <td>Starter c</td>
-            <td><input name="starter3" type="text" id="starter3" class="starters" value="0" size="3" data-price="50"/></td>
-            <td>€50</td>
+            <td>Chicken Fingers</td>
+            <td><input name="starter3" type="text" id="starter3" class="starters" value="0" size="3" data-price="10"/></td>
+            <td>€10</td>
+        </tr> 
+        <tr>
+            <td>Bow of Salad(Veg)</td>
+            <td><input name="starter4" type="text" id="starter4" class="starters" value="0" size="3" data-price="5"/></td>
+            <td>€5</td>
+        </tr>
+        <tr> <td>Main dishes:</td></tr>
+        <tr>
+            <td>Lasagna</td>
+            <td><input name="main1" type="text" id="main1" class="mains" value="0" size="3" data-price="14"/></td>
+            <td>€14</td>
         </tr>
         <tr>
-            <td>Main a</td>
-            <td><input name="main1" type="text" id="main1" class="mains" value="0" size="3" data-price="30"/></td>
-            <td>€30</td>
+            <td>Flank steak</td>
+            <td><input name="main2" type="text" id="main2" class="mains" value="0" size="3" data-price="16"/></td>
+            <td>€16</td>
         </tr>
         <tr>
-            <td>Main b</td>
-            <td><input name="main2" type="text" id="main2" class="mains" value="0" size="3" data-price="24"/></td>
-            <td>€24</td>
+            <td>Sushi</td>
+            <td><input name="main3" type="text" id="main3" class="mains" value="0" size="3" data-price="20"/></td>
+            <td>€20</td>
         </tr>
         <tr>
-            <td>Main c</td>
-            <td><input name="main3" type="text" id="main3" class="mains" value="0" size="3" data-price="24"/></td>
-            <td>€24</td>
+            <td>Vegetarian Lasagna</td>
+            <td><input name="main4" type="text" id="main4" class="mains" value="0" size="3" data-price="15"/></td>
+            <td>€15</td>
+        </tr>
+    
+        </tr>
+        <tr> <td>Drinks:</td></tr> 
+        <tr>
+            <td>Coke</td>
+            <td><input name="drink1" type="text" id="drink1" class="drinks" value="0" size="3" data-price="5"/></td>
+            <td>€5</td>
+        </tr>
+        <tr>
+            <td>Fanta</td>
+            <td><input name="drink2" type="text" id="drink2" class="drinks" value="0" size="3" data-price="4"/></td>
+            <td>€4</td>
+        </tr>
+        <tr>
+            <td>Orange Juice</td>
+            <td><input name="drink3" type="text" id="drink3" class="drinks" value="0" size="3" data-price="5"/></td>
+            <td>€5</td>
+        </tr>
+        <tr> <td>Desserts:</td></tr> 
+        <tr>
+            <td>Mousse</td>
+            <td><input name="dessert1" type="text" id="dessert1" class="drinks" value="0" size="3" data-price="8"/></td>
+            <td>€8</td>
+        </tr>
+        <tr>
+            <td>Ice cream</td>
+            <td><input name="dessert2" type="text" id="dessert2" class="drinks" value="0" size="3" data-price="10"/></td>
+            <td>€10</td>
+        </tr>
+        <tr>
+            <td>Chocolate cake</td>
+            <td><input name="dessert3" type="text" id="dessert3" class="drinks" value="0" size="3" data-price="12"/></td>
+            <td>€12</td>
         </tr>
         <tr>
             <td class="total">&nbsp;</td>
@@ -82,9 +133,10 @@
             <td class="total"><strong>
                     <div id="ItemsTotal">€0</div>
                 </strong></td>
-        </tr>
-    </table>
-
-</body>
-
-<html>
+            </tr>
+        </table>
+    
+        <script src="./js/script.js"></script>
+    </body>
+    
+    <html>

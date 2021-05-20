@@ -1,1 +1,0 @@
-freqw,ntwr

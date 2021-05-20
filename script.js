@@ -5,19 +5,18 @@ var number = document.getElementById("number");
 var special = document.getElementById("special");
 var length = document.getElementById("length");
 
-//When the user clicks on the password field, show the message box
-function display() {
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function () {
   document.getElementById("message").style.display = "block";
 };
 
 // When the user clicks outside of the password field, hide the message box
-function blur() {
+myInput.onblur = function () {
   document.getElementById("message").style.display = "none";
 };
 
 // When the user starts to type something inside the password field
-function keyup() {
-  console.log('keyup', myInput.value)
+myInput.onkeyup = function () {
   // Validate lowercase letters
   var lowerCaseLetters = /[a-z]/g;
   if (myInput.value.match(lowerCaseLetters)) {
@@ -47,17 +46,7 @@ function keyup() {
     number.classList.remove("valid");
     number.classList.add("invalid");
   }
-  // Validate special characters
-  var specialCh = /[^\\.+*?)(,}{-)]/g;
-  if (myInput.value.match(specialCh)) {
-    number.classList.remove("invalid");
-    number.classList.add("valid");
-  } else {
-    number.classList.remove("valid");
-    number.classList.add("invalid");
-  }
-
-  // Validate length
+     // Validate length
   if (myInput.value.length >= 8) {
     length.classList.remove("invalid");
     length.classList.add("valid");
@@ -65,10 +54,18 @@ function keyup() {
     length.classList.remove("valid");
     length.classList.add("invalid");
   }
+  // Validate special characters
+  var specialCh = /[^\.+*?)(,}{-)]/g;
+    if (myInput.value.match(specialCh)) {
+      special.classList.remove("invalid");
+      special.classList.add("valid");
+    } else {
+      special.classList.remove("valid");
+      special.classList.add("invalid");
+    }
 };
 
 //Table part
-
 var total_items = 4;
 
 function CalculateItemsValue() {
