@@ -1,4 +1,9 @@
-#pswContainer{
+h3{
+    font-size: larger;
+    border: 10px;
+    padding: 25 px;
+
+}#pswContainer{
     padding: 20px;
     font-size: 18px;
   }
@@ -62,3 +67,9 @@
     left: -35px;
     content: "✖";
   }
+  #randomPeople{
+    padding: 100x ;
+    background-color: #f1f1f1;
+    border: 15px solid;
+  
+    }

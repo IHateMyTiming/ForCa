@@ -46,7 +46,7 @@ myInput.onkeyup = function () {
     number.classList.remove("valid");
     number.classList.add("invalid");
   }
-     // Validate length
+  // Validate length
   if (myInput.value.length >= 8) {
     length.classList.remove("invalid");
     length.classList.add("valid");
@@ -56,39 +56,13 @@ myInput.onkeyup = function () {
   }
   // Validate special characters
   var specialCh = /[^\.+*?)(,}{-)]/g;
-    if (myInput.value.match(specialCh)) {
-      special.classList.remove("invalid");
-      special.classList.add("valid");
-    } else {
-      special.classList.remove("valid");
-      special.classList.add("invalid");
-    }
+  if (myInput.value.match(specialCh)) {
+    special.classList.remove("invalid");
+    special.classList.add("valid");
+  } else {
+    special.classList.remove("valid");
+    special.classList.add("invalid");
+  }
 };
 
-//Table part
-var total_items = 4;
-
-function CalculateItemsValue() {
-  var total = 0;
-
-  for (let i = 1; i <= total_items; i++) {
-    itemID = document.getElementById("starter_" + i);
-
-    if (itemId.className == "starters") {
-      total =
-        total +
-        parseInt(itemID.value) * parseInt(itemID.getAttribute("data-price"));
-
-      if (itemId.className == "mains") {
-        total =
-          total +
-          parseInt(itemID.value) * parseInt(itemID.getAttribute("data-price"));
-      }
-
-      document.getElementById("ItemsTotal").innerHTML = "€" + total;
-    }
-  }
-}
-document.querySelectorAll('[id^="starter_"],[id^="main_"]').forEach((item) => {
-  item.addEventListener("keyup", CalculateItemsValue);
-});
+var random = document.getElementById("randomPeople");
